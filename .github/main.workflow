@@ -30,13 +30,13 @@ workflow "Update activity" {
 }
 
 action "update-gist" {
-  uses = "JasonEtco/activity-box@master"
+  uses = "yuzulabo/activity-box@master"
   secrets = [
     "GH_PAT",
     "GITHUB_TOKEN"
   ]
   env = {
-    GH_USERNAME = "JasonEtco"
-    GIST_ID = "68c3458672047ec25e61a8af730181c3"
+    GH_USERNAME = "yuzulabo"
+    GIST_ID = "1a8d76558e2221db1990c13e242ef259"
   }
 }
