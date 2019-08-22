@@ -1,0 +1,16 @@
+on:
+  schedules:
+    - cron: '*/15 * * * *'
+name: Update gist
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: update-gist
+        uses: yuzulabo/activity-box@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
+          GIST_ID: ${{ secrets.GIST_ID }}
